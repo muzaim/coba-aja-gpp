@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Farmer1 from "../../img/common/farmer1.png";
+import Farmer2 from "../../img/common/farmer2.png";
 import Diamond from "../../img/common/diamond.png";
 import QuestBook from "../../img/common/questbook.png";
 import { Page6 } from "../index";
@@ -13,7 +13,7 @@ const Page5 = () => {
       {page6 ? (
         <Page6 />
       ) : (
-        <div className="w-full h-screen overflow-hidden bg-page2 bg-left bg-cover opacity-90 lg:max-w-6xl mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto">
             <div class="h-16">
               <div className="flex h-full justify-between items-center ">
@@ -49,58 +49,58 @@ const Page5 = () => {
             <div class="flex">
               <div class="w-56 h-screen">
                 <div className="flex justify-center">
-                  <img src={Farmer1} alt="" className="w-[5.8rem]" />
+                  <img src={Farmer2} alt="" className="w-[6rem] mt-[4.5rem]" />
                 </div>
               </div>
               <div class=" w-full h-screen">
                 <div
-                  className="w-[24rem] h-56 p-5 bg-[#782443] rounded-3xl text-start overflow-auto"
+                  className="w-[30rem] h-56 p-5 bg-[#782443] rounded-3xl  ml-5 text-start overflow-auto"
                   onClick={openPage6}
                 >
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     1 telur ayam = 1 diamond
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     1 liter susu = 100 diamond
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     1 kg pangan = 10 diamond
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     1 diamond x 100 = Rp.100
                   </p>
                   <br />
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     10kg pangan = 101 butir
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     50kg pangan = 505 butir
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     100kg pangan = 1.010 butir
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     300kg pangan = 3.030 butir
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     500kg pangan = 5.050 butir
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     1.000kg pangan = 10.00 butir = 102 liter
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     2.000kg pangan = 10.00 butir = 204 liter
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     3.000kg pangan = 10.00 butir = 306 liter
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     5.000kg pangan = 10.00 butir = 510 liter
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     7.000kg pangan = 10.00 butir = 714 liter
                   </p>
-                  <p className="text-white tracking-wide font-bold text-sm font-openSans">
+                  <p className="text-white font-semibold text-left text-xl font-openSans">
                     10.000kg pangan = 10.00 butir = 1.020 liter
                   </p>
                 </div>

@@ -22,7 +22,7 @@ const Page1 = () => {
                 kochi
               </h1>
             </div>
-            <div className="mt-8 grid gap-2">
+            <div className="mt-20 grid gap-2">
               <button className="block mx-auto py-4 px-16 bg-[#ff1616] rounded-3xl uppercase tracking-[0.15rem] font-extrabold text-white font-openSans">
                 Daftar
               </button>

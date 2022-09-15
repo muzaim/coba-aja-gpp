@@ -8,13 +8,13 @@ class App extends Component {
     return (
       <DeviceOrientation lockOrientation={"landscape"}>
         {/* Will only be in DOM in landscape */}
-        <Orientation orientation="landscape" alwaysRender={false}>
+        <Orientation orientation="landscape" alwaysRender={true}>
           <Page1 />
         </Orientation>
         {/* Will stay in DOM, but is only visible in portrait */}
-        <Orientation orientation="portrait" alwaysRender={false}>
-          <Page5 />
-        </Orientation>
+        {/* <Orientation orientation="portrait" alwaysRender={false}>
+          <h1>Miringkan hp anda</h1>
+        </Orientation> */}
       </DeviceOrientation>
     );
   }

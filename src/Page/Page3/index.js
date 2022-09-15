@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Farmer1 from "../../img/common/farmer1.png";
+import Farmer2 from "../../img/common/farmer2.png";
 import Diamond from "../../img/common/diamond.png";
 import QuestBook from "../../img/common/questbook.png";
 import { Page4 } from "../index";
@@ -14,7 +14,7 @@ const Page3 = () => {
       {page4 ? (
         <Page4 />
       ) : (
-        <div className="w-full h-screen overflow-hidden bg-page2 bg-left bg-cover opacity-90 lg:max-w-6xl mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto">
             <div class="h-16">
               <div className="flex h-full justify-between items-center ">
@@ -39,15 +39,15 @@ const Page3 = () => {
             <div class="flex">
               <div class="w-56 h-screen">
                 <div className="flex justify-center">
-                  <img src={Farmer1} alt="" className="w-[5.8rem]" />
+                  <img src={Farmer2} alt="" className="w-[6rem] mt-[4.5rem]" />
                 </div>
               </div>
-              <div class=" w-full h-screen">
+              <div class="w-full h-screen">
                 <div
-                  className="w-[30rem] p-5 bg-[#782443] rounded-3xl"
+                  className="w-[30rem] p-5 bg-[#782443] rounded-3xl ml-5"
                   onClick={openPage4}
                 >
-                  <h1 className="text-white tracking-wide text-center text-xl font-openSans">
+                  <h1 className="text-white font-semibold text-center text-xl font-openSans">
                     Pilih Agenda, dan mulai membeli kandang untuk hewan ternak
                     kamu, beri makan hewan ternak kamu dan hasilkan telur dan
                     susu, lalu jual ke pasar, dan mulai menghasilkan diamond

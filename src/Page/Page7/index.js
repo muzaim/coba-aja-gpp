@@ -49,12 +49,11 @@ const Page7 = () => {
             </div>
           </div>
           <div class=" w-full h-screen">
-            <div className="w-[30rem] p-5 bg-[#782443] rounded-3xl">
-              <h1 className="text-white tracking-wide text-center text-xl font-openSans">
-                Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu,
-                beri makan hewan ternak kamu dan hasilkan telur dan susu, lalu
-                jual ke pasar, dan mulai menghasilkan diamond lebih banyak lagi!
-              </h1>
+            <div class="w-full bg-gray-200 h-5 mb-6 rounded-full overflow-hidden">
+              <div
+                class="bg-blue-600 h-5 rounded-r-full "
+                style={{ width: "25%" }}
+              ></div>
             </div>
           </div>
         </div>
