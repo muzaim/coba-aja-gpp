@@ -9,7 +9,7 @@ class App extends Component {
       <DeviceOrientation lockOrientation={"landscape"}>
         {/* Will only be in DOM in landscape */}
         <Orientation orientation="landscape" alwaysRender={false}>
-          <Page7 />
+          <Page1 />
         </Orientation>
         {/* Will stay in DOM, but is only visible in portrait */}
         <Orientation orientation="portrait" alwaysRender={false}>
