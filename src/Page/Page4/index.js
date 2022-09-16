@@ -1,65 +1,113 @@
 import React, { useState } from "react";
 import Farmer2 from "../../img/common/farmer2.png";
-import Diamond from "../../img/common/diamond.png";
-import QuestBook from "../../img/common/questbook.png";
-import Typed from "react-typed";
+import Next from "../../img/usage/play.png";
+import Typewriter from "typewriter-effect";
 import { Page5 } from "../index";
 
 const Page4 = () => {
   const [page5, setPage5] = useState(false);
+  const [skipDialog, setSkipDalog] = useState(false);
+  const [nextButton, setNextButton] = useState(false);
+
+  const skip = () => {
+    setSkipDalog((current) => !current);
+  };
+
+  const DialogComplete = () => {
+    return (
+      <div className="w-[30rem] min-h-[7rem] px-5 pb-5 pt-10 bg-[#782443] rounded-xl ml-5 ring-offset-2 ring-4 ring-[#782443] relative">
+        <div className="absolute -top-5 left-10">
+          <div className="w-40 py-2 bg-[#782443] ring-offset-2 ring-4 ring-[#782443] rounded-xl text-center">
+            <span className="text-white font-semibold text-justify text-md font-openSans">
+              Mr. Ducan
+            </span>
+          </div>
+        </div>
+        <div className="h-full grid gap-2 ">
+          <h1 className="text-white font-semibold text-justify text-xl font-openSans">
+            Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu,
+            beri makan hewan ternak kamu dan hasilkan telur dan susu, lalu
+            jualke pasar, dan mulai menghasilkan diamond lebih banyak lagi!
+          </h1>
+          <div className="flex justify-end h-6">
+            <img
+              src={Next}
+              alt=""
+              className="w-6 animate-pulse"
+              onClick={openPage5}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const openPage5 = () => {
     setPage5((current) => !current);
   };
+
   return (
     <>
       {page5 ? (
         <Page5 />
       ) : (
         <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
-          <div className="w-[90%] h-full mx-auto">
-            <div class="h-16">
-              {/* <div className="flex h-full justify-between items-center ">
-                <div className="w-44 h-10 bg-[#782443] rounded-full items-center flex">
-                  <div className="w-20 flex items-center justify-center ">
-                    <img src={Diamond} alt="" className="w-10" />
-                  </div>
-                  <div className="w-full text-start ">
-                    <span className="text-white font-bold font-openSans text-sm">
-                      Rp.12.000
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <img src={QuestBook} alt="" className="w-16" />
-                </div>
-              </div> */}
-            </div>
+          <div className="w-[90%] h-full mx-auto relative">
+            <div class="h-16"></div>
             <div class="flex">
-              <div class="w-56 h-screen">
+              <div class="w-fit h-screen">
                 <div className="flex justify-center">
-                  <img src={Farmer2} alt="" className="w-[6rem] mt-[4.5rem]" />
+                  <img src={Farmer2} alt="" className="w-[12rem] mt-[2.5rem]" />
                 </div>
               </div>
-              <div class=" w-full h-screen relative">
-                <div className="w-[30rem] pt-10 pb-16 bg-[#782443] rounded-3xl ml-5">
-                  <h1 className="text-white font-semibold text-center text-xl font-openSans">
-                    <Typed
-                      showCursor={false}
-                      strings={[
-                        "Hari ini semakin cerah, yuk mulai beternak lagi, dan dapatkan Diamond semakin banyak",
-                      ]}
-                      typeSpeed={30}
-                    ></Typed>
-                  </h1>
-                </div>
-                <div
-                  className="w-[13rem] rounded-2xl py-4 bg-[#f6f3e4] text-center absolute top-32 left-36"
-                  onClick={openPage5}
-                >
-                  <div className=" uppercase text-[12px] font-bold tracking-wide text-[#782443]">
-                    Masuk agenda
+              <div class="w-1/2 h-screen ">
+                {skipDialog ? (
+                  <DialogComplete />
+                ) : (
+                  <div
+                    className="w-[30rem] min-h-[7rem] px-5 pb-5 pt-10 bg-[#782443] rounded-xl ml-5 ring-offset-2 ring-4 ring-[#782443] relative"
+                    onClick={skip}
+                  >
+                    <div className="absolute -top-5 left-10">
+                      <div className="w-40 py-2 bg-[#782443] ring-offset-2 ring-4 ring-[#782443] rounded-xl text-center">
+                        <span className="text-white font-semibold text-justify text-md font-openSans">
+                          Mr. Ducan
+                        </span>
+                      </div>
+                    </div>
+                    <div className="h-full grid gap-2 ">
+                      <h1 className="text-white font-semibold text-justify text-xl font-openSans">
+                        <Typewriter
+                          options={{
+                            delay: 30,
+                            cursor: " ",
+                          }}
+                          onInit={(typewriter) => {
+                            typewriter
+                              .typeString(
+                                "Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu, beri makan hewan ternak kamu dan hasilkan telur dan susu, lalu jual ke pasar, dan mulai menghasilkan diamond lebih banyak lagi!"
+                              )
+                              .start()
+                              .pauseFor(300)
+                              .callFunction(() => {
+                                setNextButton(true);
+                              });
+                          }}
+                        />
+                      </h1>
+
+                      <div className="flex justify-end h-6">
+                        {nextButton ? (
+                          <img
+                            src={Next}
+                            alt=""
+                            className="w-6 animate-pulse"
+                          />
+                        ) : null}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

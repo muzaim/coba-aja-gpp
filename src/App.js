@@ -11,6 +11,7 @@ import {
   Page9,
   Page11,
   Page12,
+  Rotate,
 } from "./Page";
 import React, { Component } from "react";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
@@ -20,13 +21,15 @@ class App extends Component {
     return (
       <DeviceOrientation lockOrientation={"landscape"}>
         {/* Will only be in DOM in landscape */}
-        <Orientation orientation="landscape" alwaysRender={true}>
-          <Page1 />
+        <Orientation orientation="landscape" alwaysRender={false}>
+          <div className="noSelect">
+            <Page1 />
+          </div>
         </Orientation>
         {/* Will stay in DOM, but is only visible in portrait */}
-        {/* <Orientation orientation="portrait" alwaysRender={false}>
-          <h1>Miringkan hp anda</h1>
-        </Orientation> */}
+        <Orientation orientation="portrait" alwaysRender={false}>
+          <Rotate />
+        </Orientation>
       </DeviceOrientation>
     );
   }

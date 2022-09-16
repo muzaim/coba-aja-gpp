@@ -27,7 +27,7 @@ const Page1 = () => {
                 Daftar
               </button>
               <button
-                className="block mx-auto py-4 px-16 bg-[#5e17eb] rounded-3xl uppercase tracking-[0.15rem] font-extrabold text-white font-openSans"
+                className="block mx-auto py-4 px-16 bg-[#5e17eb] rounded-3xl uppercase tracking-[0.15rem] font-extrabold text-white font-openSans active:bg-[#7041cf]"
                 onClick={openPage2}
               >
                 Masuk

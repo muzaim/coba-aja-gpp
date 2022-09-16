@@ -8,6 +8,7 @@ module.exports = {
         page2: "url('./img/bg/6.jpg')",
         pageMap: "url('./img/bg/map.jpg')",
         barn: "url('./img/bg/1.jpg')",
+        oak: "url('./img/bg/oak.jpg')",
       },
       fontFamily: {
         bukhari: ["Bukhari Script"],
