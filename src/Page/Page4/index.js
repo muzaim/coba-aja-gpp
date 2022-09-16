@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Farmer2 from "../../img/common/farmer2.png";
 import Diamond from "../../img/common/diamond.png";
 import QuestBook from "../../img/common/questbook.png";
+import Typed from "react-typed";
 import { Page5 } from "../index";
 
 const Page4 = () => {
@@ -17,7 +18,7 @@ const Page4 = () => {
         <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto">
             <div class="h-16">
-              <div className="flex h-full justify-between items-center ">
+              {/* <div className="flex h-full justify-between items-center ">
                 <div className="w-44 h-10 bg-[#782443] rounded-full items-center flex">
                   <div className="w-20 flex items-center justify-center ">
                     <img src={Diamond} alt="" className="w-10" />
@@ -31,7 +32,7 @@ const Page4 = () => {
                 <div>
                   <img src={QuestBook} alt="" className="w-16" />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div class="flex">
               <div class="w-56 h-screen">
@@ -42,8 +43,13 @@ const Page4 = () => {
               <div class=" w-full h-screen relative">
                 <div className="w-[30rem] pt-10 pb-16 bg-[#782443] rounded-3xl ml-5">
                   <h1 className="text-white font-semibold text-center text-xl font-openSans">
-                    Hari ini semakin cerah, yuk mulai beternak lagi, dan
-                    dapatkan Diamond semakin banyak
+                    <Typed
+                      showCursor={false}
+                      strings={[
+                        "Hari ini semakin cerah, yuk mulai beternak lagi, dan dapatkan Diamond semakin banyak",
+                      ]}
+                      typeSpeed={30}
+                    ></Typed>
                   </h1>
                 </div>
                 <div

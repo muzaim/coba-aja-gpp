@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Farmer2 from "../../img/common/farmer2.png";
 import Diamond from "../../img/common/diamond.png";
 import QuestBook from "../../img/common/questbook.png";
+import Typed from "react-typed";
 import { Page4 } from "../index";
 
 const Page3 = () => {
@@ -15,9 +16,9 @@ const Page3 = () => {
         <Page4 />
       ) : (
         <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
-          <div className="w-[90%] h-full mx-auto">
+          <div className="w-[90%] h-full mx-auto relative">
             <div class="h-16">
-              <div className="flex h-full justify-between items-center ">
+              {/* <div className="flex h-full justify-between items-center ">
                 <div
                   className="w-44 h-10 bg-[#782443] rounded-full items-center flex"
                   onClick={openPage4}
@@ -34,7 +35,7 @@ const Page3 = () => {
                 <div>
                   <img src={QuestBook} alt="" className="w-16" />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div class="flex">
               <div class="w-56 h-screen">
@@ -48,10 +49,13 @@ const Page3 = () => {
                   onClick={openPage4}
                 >
                   <h1 className="text-white font-semibold text-center text-xl font-openSans">
-                    Pilih Agenda, dan mulai membeli kandang untuk hewan ternak
-                    kamu, beri makan hewan ternak kamu dan hasilkan telur dan
-                    susu, lalu jual ke pasar, dan mulai menghasilkan diamond
-                    lebih banyak lagi!
+                    <Typed
+                      showCursor={false}
+                      strings={[
+                        "Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu, beri makan hewan ternak kamu dan hasilkan telur dansusu, lalu jual ke pasar, dan mulai menghasilkan diamondlebih banyak lagi!",
+                      ]}
+                      typeSpeed={30}
+                    ></Typed>
                   </h1>
                 </div>
               </div>

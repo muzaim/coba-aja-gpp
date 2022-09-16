@@ -16,9 +16,8 @@ const Page5 = () => {
         <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto">
             <div class="h-16">
-              <div className="flex h-full justify-between items-center ">
+              {/* <div className="flex h-full justify-between items-center ">
                 <div className="flex gap-2">
-                  {/* DIAMOND */}
                   <div className="w-44 h-10 bg-[#782443] rounded-full items-center flex">
                     <div className="w-20 flex items-center justify-center ">
                       <img src={Diamond} alt="" className="w-10" />
@@ -40,11 +39,11 @@ const Page5 = () => {
                     </span>
                   </div>
                 </div>
-                {/* BOOK QUEST */}
+
                 <div>
                   <img src={QuestBook} alt="" className="w-16" />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div class="flex">
               <div class="w-56 h-screen">

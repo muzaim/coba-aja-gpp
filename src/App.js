@@ -1,5 +1,17 @@
 import "./App.css";
-import { Page1, Page2, Page3, Page4, Page5, Page6, Page7 } from "./Page";
+import {
+  Page1,
+  Page2,
+  Page3,
+  Page4,
+  Page5,
+  Page6,
+  Page7,
+  Page8,
+  Page9,
+  Page11,
+  Page12,
+} from "./Page";
 import React, { Component } from "react";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 
