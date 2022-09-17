@@ -25,9 +25,8 @@ const Page4 = () => {
         </div>
         <div className="h-full grid gap-2 ">
           <h1 className="text-white font-semibold text-justify text-xl font-openSans">
-            Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu,
-            beri makan hewan ternak kamu dan hasilkan telur dan susu, lalu
-            jualke pasar, dan mulai menghasilkan diamond lebih banyak lagi!
+            Hari ini semakin cerah, yuk mulai beternak lagi, dan dapatkan
+            Diamond semakin banyak!
           </h1>
           <div className="flex justify-end h-6">
             <img
@@ -85,7 +84,7 @@ const Page4 = () => {
                           onInit={(typewriter) => {
                             typewriter
                               .typeString(
-                                "Pilih Agenda, dan mulai membeli kandang untuk hewan ternak kamu, beri makan hewan ternak kamu dan hasilkan telur dan susu, lalu jual ke pasar, dan mulai menghasilkan diamond lebih banyak lagi!"
+                                "Hari ini semakin cerah, yuk mulai beternak lagi, dan dapatkan Diamond semakin banyak!"
                               )
                               .start()
                               .pauseFor(300)
@@ -96,7 +95,7 @@ const Page4 = () => {
                         />
                       </h1>
 
-                      <div className="flex justify-end h-6">
+                      <div className="flex justify-end h-6" onClick={openPage5}>
                         {nextButton ? (
                           <img
                             src={Next}

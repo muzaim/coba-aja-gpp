@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import Farmer2 from "../../img/common/farmer2.png";
+
+import Chef1 from "../../img/common/chef1.png";
+import Milk from "../../img/common/milk.png";
+import Diamond from "../../img/common/diamond.png";
+import Egg from "../../img/common/egg.png";
+import Pouch from "../../img/common/pouch.png";
+
 import Next from "../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
-import { Page3 } from "../index";
+import { Page15 } from "../index";
 
-const Page2 = () => {
-  const [page3, setPage3] = useState(false);
+const Page14 = () => {
+  const [page15, setPage15] = useState(false);
   const [skipDialog, setSkipDalog] = useState(false);
   const [nextButton, setNextButton] = useState(false);
 
@@ -19,15 +25,15 @@ const Page2 = () => {
         <div className="absolute -top-5 left-10">
           <div className="w-40 py-2 bg-[#782443] ring-offset-2 ring-4 ring-[#782443] rounded-xl text-center">
             <span className="text-white font-semibold text-justify text-md font-openSans">
-              Mr. Ducan
+              Mrs. Lisa
             </span>
           </div>
         </div>
         <div className="h-full grid gap-2 ">
           <h1 className="text-white font-semibold text-justify text-xl font-openSans">
-            Selamat datang di TAMAKOCHI, mulai dengan beternak hewan kesayangan
-            kamu dan hasilkan diamond setiap harinya ! Dapatkan 10 Diamond
-            Gratis untuk pengguna pertama.
+            Yah.. Stok telur dan susu kamu habis. Kamu membutuhkn 12 butir telur
+            dan 10.000 liter susu sapi segar, ayo mulai beternak dan berikan
+            pangan hewan kamu!
           </h1>
           <div className="flex justify-end h-6">
             <img
@@ -43,24 +49,65 @@ const Page2 = () => {
   };
 
   const openPage3 = () => {
-    setPage3((current) => !current);
+    setPage15((current) => !current);
   };
 
   return (
     <>
-      {page3 ? (
-        <Page3 />
+      {page15 ? (
+        <Page15 />
       ) : (
-        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-caffe bg-cover lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto relative">
-            <div class="h-16"></div>
+            {/* HEADER */}
+            <div class="h-16">
+              <div className="flex h-full justify-between items-center ">
+                <div className="flex gap-2">
+                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
+                    <div className="w-20 flex items-center justify-center ">
+                      <img src={Diamond} alt="" className="w-10" />
+                    </div>
+                    <div className="w-full text-start ">
+                      <span className="font-bold  text-sm text-[#782443]">
+                        0
+                      </span>
+                    </div>
+                  </div>
+                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
+                    <div className="w-20 flex items-center justify-center ">
+                      <img src={Egg} alt="" className="w-8" />
+                    </div>
+                    <div className="w-full text-start ">
+                      <span className="font-bold  text-sm text-[#782443]">
+                        135 Butir
+                      </span>
+                    </div>
+                  </div>
+                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
+                    <div className="w-20 flex items-center justify-center ">
+                      <img src={Milk} alt="" className="w-8" />
+                    </div>
+                    <div className="w-full text-start ">
+                      <span className="font-bold  text-sm text-[#782443]">
+                        514 Liter
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* <div>
+                  <img src={QuestBook} alt="" className="w-16" />
+                </div> */}
+              </div>
+            </div>
+            {/* HEADER END*/}
             <div class="flex">
               <div class="w-fit h-screen">
                 <div className="flex justify-center">
-                  <img src={Farmer2} alt="" className="w-[12rem] mt-[2.5rem]" />
+                  <img src={Chef1} alt="" className="w-[14rem] mt-[0rem]" />
                 </div>
               </div>
-              <div class="w-1/2 h-screen ">
+              <div class="w-1/2 h-screen mt-10">
                 {skipDialog ? (
                   <DialogComplete />
                 ) : (
@@ -71,7 +118,7 @@ const Page2 = () => {
                     <div className="absolute -top-5 left-10">
                       <div className="w-40 py-2 bg-[#782443] ring-offset-2 ring-4 ring-[#782443] rounded-xl text-center">
                         <span className="text-white font-semibold text-justify text-md font-openSans">
-                          Mr. Ducan
+                          Mrs. Lisa
                         </span>
                       </div>
                     </div>
@@ -85,7 +132,7 @@ const Page2 = () => {
                           onInit={(typewriter) => {
                             typewriter
                               .typeString(
-                                "Selamat datang di TAMAKOCHI, mulai dengan beternak hewan kesayangan kamu dan hasilkan diamond setiap harinya ! Dapatkan 10 Diamond Gratis untuk pengguna pertama."
+                                "Yah.. Stok telur dan susu kamu habis. Kamu membutuhkn 12 butir telur dan 10.000 liter susu sapi segar, ayo mulai beternak dan berikan pangan hewan kamu!"
                               )
                               .start()
                               .pauseFor(300)
@@ -117,4 +164,4 @@ const Page2 = () => {
   );
 };
 
-export default Page2;
+export default Page14;

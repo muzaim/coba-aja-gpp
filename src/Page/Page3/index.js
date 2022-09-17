@@ -96,7 +96,7 @@ const Page3 = () => {
                         />
                       </h1>
 
-                      <div className="flex justify-end h-6">
+                      <div className="flex justify-end h-6" onClick={openPage4}>
                         {nextButton ? (
                           <img
                             src={Next}

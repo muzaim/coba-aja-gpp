@@ -11,6 +11,9 @@ import {
   Page9,
   Page11,
   Page12,
+  Page13,
+  Page14,
+  Page15,
   Rotate,
 } from "./Page";
 import React, { Component } from "react";

@@ -1,26 +1,29 @@
 import React from "react";
 import { useState } from "react";
-import Chicken from "../../img/common/chickenandhen.png";
-import Cow from "../../img/common/cow.png";
 import Diamond from "../../img/common/diamond.png";
+import Chicken from "../../img/common/chickenandhen.png";
 import Egg from "../../img/common/egg.png";
 import Pouch from "../../img/common/pouch.png";
 import QuestBook from "../../img/common/questbook.png";
-import RightArrow from "../../img/usage/right-arrow.png";
-import LeftArrow from "../../img/usage/left-arrow.png";
-import { Page9 } from "../index";
+import { Page9, Page12 } from "../index";
 
-const Page8 = ({ name, skill, image }) => {
+const Page8 = ({
+  name = "Ayam Eropa",
+  skill = "Max 1.020 telur perhari",
+  image = Chicken,
+}) => {
   const [page9, setPage9] = useState(false);
+  const [page12, setPage12] = useState(false);
+  const openPage12 = () => {
+    setPage12((current) => !current);
+  };
 
   const openPage9 = () => {
     setPage9((current) => !current);
   };
   return (
     <>
-      {page9 ? (
-        <Page9 />
-      ) : (
+      {(page9 && <Page9 />) || (page12 && <Page12 />) || (
         <div className="w-full h-screen overflow-hidden bg-barn bg-left bg-cover opacity-90 lg:max-w-6xl mx-auto">
           <div className="w-[90%] h-full mx-auto">
             {/* HEADER */}
@@ -93,20 +96,23 @@ const Page8 = ({ name, skill, image }) => {
             <div className="grid grid-cols-3 mt-3">
               <div className=""></div>
               <div className=" px-3">
-                <div className="w-full h-full bg-white rounded-full py-3 text-center">
+                <div
+                  className="w-full h-full bg-white rounded-full py-3 text-center"
+                  onClick={openPage12}
+                >
                   <button className="font-semibold capitalize text-lg tracking-wider text-[#782443]">
                     tambah ternak
                   </button>
                 </div>
               </div>
               <div className=" px-3">
-                <div className="w-full h-full bg-[#5e17eb] rounded-full py-3 text-center">
-                  <button
-                    className="font-semibold capitalize text-lg tracking-wider text-white"
-                    onClick={openPage9}
-                  >
+                <div
+                  className="w-full h-full bg-[#5e17eb] rounded-full py-3 text-center active:bg-[#7041cf]"
+                  onClick={openPage9}
+                >
+                  <div className="font-semibold capitalize text-lg tracking-wider text-white">
                     proses pangan
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

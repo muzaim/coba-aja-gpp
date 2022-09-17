@@ -8,7 +8,21 @@ module.exports = {
         page2: "url('./img/bg/6.jpg')",
         pageMap: "url('./img/bg/map.jpg')",
         barn: "url('./img/bg/1.jpg')",
-        oak: "url('./img/bg/oak.jpg')",
+        caffe: "url('./img/bg/caffe2.jpg')",
+        outFarm: "url('./img/bg/outfarm.jpg')",
+      },
+      animation: {
+        running: "fill 3.5s linear",
+      },
+      keyframes: {
+        fill: {
+          "0%": {
+            width: "0%",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
       },
       fontFamily: {
         bukhari: ["Bukhari Script"],
