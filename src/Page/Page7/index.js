@@ -68,7 +68,7 @@ const Page7 = () => {
           <div className="w-full h-screen overflow-hidden bg-barn bg-cover lg:max-w-6xl mx-auto">
             <div className="w-[90%] h-full mx-auto ">
               {/* HEADER */}
-              <div class="h-[15%] border">
+              <div class="h-[15%]">
                 <Header
                   Diamond={true}
                   Egg={true}
@@ -79,7 +79,7 @@ const Page7 = () => {
               </div>
               {/* HEADER END */}
               {/* CONTENT */}
-              <div class="h-[65%] border">
+              <div class="h-[65%]">
                 <div class="grid grid-cols-3">
                   <div className="col-span-3 h-12 text-center flex justify-center">
                     <h1 className="text-lg font-semibold text-white tracking-wider ">
@@ -109,7 +109,7 @@ const Page7 = () => {
               </div>
               {/* CONTENT END*/}
               {/* FOOTER */}
-              <div class="h-[20%] border">
+              <div class="h-[20%]">
                 <div className="grid grid-cols-3 ">
                   <div className=""></div>
                   <div className=" px-3">
