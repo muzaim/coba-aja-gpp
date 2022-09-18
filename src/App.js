@@ -26,7 +26,7 @@ class App extends Component {
         {/* Will only be in DOM in landscape */}
         <Orientation orientation="landscape" alwaysRender={false}>
           <div className="noSelect">
-            <Page1 />
+            <Page7 />
           </div>
         </Orientation>
         {/* Will stay in DOM, but is only visible in portrait */}

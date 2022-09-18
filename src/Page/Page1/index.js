@@ -26,7 +26,7 @@ const Page1 = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 1);
   }, []);
 
   const Menu = () => {
@@ -46,7 +46,7 @@ const Page1 = () => {
       {page2 ? (
         <Page2 />
       ) : (
-        <div className="w-full h-screen bg-page1 bg-cover opacity-90">
+        <div className="w-full h-screen bg-farmBarn bg-cover opacity-90">
           <div className="w-3/4 h-full mx-auto ">
             <div className="py-3">
               <h1 className="text-6xl font-bold text-center text-rose-900 -rotate-17 font-bukhari ">
