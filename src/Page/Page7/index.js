@@ -6,6 +6,7 @@ import LeftArrow from "../../img/usage/left-arrow.png";
 import { useState } from "react";
 import { Page8, Page12 } from "../index";
 import Header from "../../Component/Diatom/Header";
+import Button from "../../Component/Atom/Button";
 
 const Page7 = () => {
   const [page8, setPage8] = useState(false);
@@ -94,7 +95,7 @@ const Page7 = () => {
                       onClick={previousHewan}
                     />
                   </div>
-                  <div className=" flex justify-center h-40">
+                  <div className=" flex justify-center h-40 ">
                     <img src={image} alt="" className="w-36" />
                   </div>
                   <div className=" flex items-center ">
@@ -110,27 +111,25 @@ const Page7 = () => {
               {/* CONTENT END*/}
               {/* FOOTER */}
               <div class="h-[20%]">
-                <div className="grid grid-cols-3 ">
+                <div className="grid grid-cols-3 gap-3">
                   <div className=""></div>
-                  <div className=" px-3">
-                    <div
-                      className="w-full h-full bg-white rounded-full py-3 text-center active:bg-slate-300"
-                      onClick={openPage12}
-                    >
-                      <div className="font-semibold capitalize text-lg tracking-wider text-[#782443]">
-                        tambah ternak
-                      </div>
-                    </div>
+                  <div className="">
+                    <Button
+                      action={openPage12}
+                      text={"tambah ternak"}
+                      textColor={"#782443"}
+                      bgColor={"#ffffff"}
+                      activeColor={"bg-slate-300"}
+                    />
                   </div>
-                  <div className=" px-3">
-                    <div
-                      className="w-full h-full bg-[#5e17eb] rounded-full py-3 text-center active:bg-[#7041cf]"
-                      onClick={openPage8}
-                    >
-                      <div className="font-semibold capitalize text-lg tracking-wider text-white ">
-                        beri pangan
-                      </div>
-                    </div>
+                  <div className="">
+                    <Button
+                      action={openPage8}
+                      text={"beri pangan"}
+                      textColor={"#ffffff"}
+                      bgColor={"#5e17eb"}
+                      activeColor={"bg-slate-300"}
+                    />
                   </div>
                 </div>
               </div>

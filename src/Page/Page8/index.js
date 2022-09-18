@@ -6,7 +6,8 @@ import Egg from "../../img/common/egg.png";
 import Pouch from "../../img/common/pouch.png";
 import QuestBook from "../../img/common/questbook.png";
 import { Page9, Page12 } from "../index";
-
+import Header from "../../Component/Diatom/Header";
+import Button from "../../Component/Atom/Button";
 const Page8 = ({
   name = "Ayam Eropa",
   skill = "Max 1.020 telur perhari",
@@ -24,95 +25,62 @@ const Page8 = ({
   return (
     <>
       {(page9 && <Page9 />) || (page12 && <Page12 />) || (
-        <div className="w-full h-screen overflow-hidden bg-barn bg-left bg-cover opacity-90 lg:max-w-6xl mx-auto">
-          <div className="w-[90%] h-full mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-barn bg-cover lg:max-w-6xl mx-auto">
+          <div className="w-[90%] h-full mx-auto ">
             {/* HEADER */}
-            <div class="h-16">
-              <div className="flex h-full justify-between items-center ">
-                <div className="flex gap-2">
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Diamond} alt="" className="w-10" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        0
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Egg} alt="" className="w-8" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        135 Butir
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Pouch} alt="" className="w-8" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        10.000 Kg
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <img src={QuestBook} alt="" className="w-16" />
-                </div>
-              </div>
+            <div class="h-[15%]">
+              <Header
+                Diamond={true}
+                Egg={true}
+                Susu={false}
+                Pouch={true}
+                QuestBook={true}
+              />
             </div>
             {/* HEADER END */}
             {/* CONTENT */}
-            <div class="grid grid-cols-3 ">
-              <div className="col-span-3 h-12 text-center flex justify-center">
-                <div className="flex items-center h-full">
-                  <img src={Pouch} alt="" className="w-10" />
-                  <div class="w-56 bg-gray-200 h-5 rounded-full overflow-hidden ">
-                    <div
-                      class="bg-[#7fa65a] h-5 rounded-full"
-                      style={{ width: "62%" }}
-                    ></div>
+            <div class="h-[65%]">
+              <div class="grid grid-cols-3">
+                <div className="col-span-3 h-12 text-center flex justify-center">
+                  <div className="flex items-center h-full">
+                    <img src={Pouch} alt="" className="w-10" />
+                    <div class="w-56 bg-gray-200 h-5 rounded-full overflow-hidden ">
+                      <div
+                        class="bg-[#7fa65a] h-5 rounded-full"
+                        style={{ width: "27%" }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className=" flex items-center justify-end">
-                {/* <img src={LeftArrow} alt="" className="w-20 mr-10" /> */}
-              </div>
-              <div className=" flex justify-center">
-                <img src={image} alt="" className="w-36" />
-              </div>
-              <div className=" flex items-center ">
-                {/* <img src={RightArrow} alt="" className="w-20 ml-10" /> */}
+                <div className=""></div>
+                <div className="flex justify-center h-40 ">
+                  <img src={image} alt="" className="w-36" />
+                </div>
+                <div className=""></div>
               </div>
             </div>
             {/* CONTENT END*/}
             {/* FOOTER */}
-            <div className="grid grid-cols-3 mt-3">
-              <div className=""></div>
-              <div className=" px-3">
-                <div
-                  className="w-full h-full bg-white rounded-full py-3 text-center"
-                  onClick={openPage12}
-                >
-                  <button className="font-semibold capitalize text-lg tracking-wider text-[#782443]">
-                    tambah ternak
-                  </button>
+            <div class="h-[20%]">
+              <div className="grid grid-cols-3 gap-3">
+                <div className=""></div>
+                <div className="">
+                  <Button
+                    action={openPage12}
+                    text={"tambah ternak"}
+                    textColor={"#782443"}
+                    bgColor={"#ffffff"}
+                    activeColor={"bg-slate-300"}
+                  />
                 </div>
-              </div>
-              <div className=" px-3">
-                <div
-                  className="w-full h-full bg-[#5e17eb] rounded-full py-3 text-center active:bg-[#7041cf]"
-                  onClick={openPage9}
-                >
-                  <div className="font-semibold capitalize text-lg tracking-wider text-white">
-                    proses pangan
-                  </div>
+                <div className="">
+                  <Button
+                    action={openPage9}
+                    text={"proses pangan"}
+                    textColor={"#ffffff"}
+                    bgColor={"#5e17eb"}
+                    activeColor={"bg-slate-300"}
+                  />
                 </div>
               </div>
             </div>

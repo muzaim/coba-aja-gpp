@@ -3,12 +3,12 @@ import Diamond from "../../img/common/diamond.png";
 import Egg from "../../img/common/egg.png";
 import Pouch from "../../img/common/pouch.png";
 import QuestBook from "../../img/common/questbook.png";
-import { Page12, Page7, Page13 } from "../index";
+import { Page7, Page13 } from "../index";
 import { useState } from "react";
-
+import Button from "../../Component/Atom/Button";
+import Header from "../../Component/Diatom/Header";
 const Page9 = () => {
   const [page7, setPage7] = useState(false);
-  const [page12, setPage12] = useState(false);
   const [page13, setPage13] = useState(false);
 
   const Makanan = [
@@ -42,62 +42,27 @@ const Page9 = () => {
     setPage7((current) => !current);
   };
 
-  const openPage12 = () => {
-    setPage12((current) => !current);
-  };
-
   const openPage13 = () => {
     setPage13((current) => !current);
   };
   return (
     <>
       {(page7 && <Page7 />) || (page13 && <Page13 />) || (
-        <div className="w-full h-screen overflow-hidden bg-barn bg-left bg-cover opacity-90 lg:max-w-6xl mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-barn bg-cover lg:max-w-6xl mx-auto ">
           <div className="w-[90%] h-full mx-auto">
             {/* HEADER */}
-            <div class="h-16">
-              <div className="flex h-full justify-between items-center ">
-                <div className="flex gap-2">
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Diamond} alt="" className="w-10" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        0
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Egg} alt="" className="w-8" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        135 Butir
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
-                    <div className="w-20 flex items-center justify-center ">
-                      <img src={Pouch} alt="" className="w-8" />
-                    </div>
-                    <div className="w-full text-start ">
-                      <span className="font-bold  text-sm text-[#782443]">
-                        10.000 Kg
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <img src={QuestBook} alt="" className="w-16" />
-                </div>
-              </div>
+            <div class="h-[15%]">
+              <Header
+                Diamond={true}
+                Egg={true}
+                Susu={false}
+                Pouch={true}
+                QuestBook={true}
+              />
             </div>
             {/* HEADER END */}
             {/* CONTENT */}
-            <div class="w-full">
+            <div class="h-[65%]">
               <div className="col-span-2 h-12 text-center flex justify-center">
                 <h1 className="text-lg font-semibold text-white tracking-wider ">
                   Berapa banyak makanan yang ingin kamu berikan hari ini?
@@ -124,24 +89,28 @@ const Page9 = () => {
             </div>
             {/* CONTENT END*/}
             {/* FOOTER */}
-            <div className="grid grid-cols-2 mt-3 ">
-              <div className=" px-3 flex justify-center">
-                <div
-                  className="w-72 h-full bg-[#329bd1] rounded-full py-3 text-center"
-                  onClick={openPage7}
-                >
-                  <div className="font-semibold capitalize text-lg tracking-wider text-white">
-                    kembali
+            <div class="h-[25%] ">
+              <div className="grid grid-cols-2">
+                <div className="w-full flex justify-center">
+                  <div className="w-60">
+                    <Button
+                      action={openPage7}
+                      text={"kembali"}
+                      textColor={"#ffffff"}
+                      bgColor={"#329bd1"}
+                      activeColor={"bg-slate-300"}
+                    />
                   </div>
                 </div>
-              </div>
-              <div className=" px-3 flex justify-center">
-                <div
-                  className="w-72 h-full bg-[#ff1616] rounded-full py-3 text-center "
-                  onClick={openPage13}
-                >
-                  <div className="font-semibold capitalize text-lg tracking-wider text-white">
-                    beri pangan
+                <div className="w-full flex justify-center">
+                  <div className="w-60">
+                    <Button
+                      action={openPage13}
+                      text={"beri pangan"}
+                      textColor={"#ffffff"}
+                      bgColor={"#ff1616"}
+                      activeColor={"bg-slate-300"}
+                    />
                   </div>
                 </div>
               </div>

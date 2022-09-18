@@ -6,7 +6,6 @@ import Diamond from "../../img/common/diamond.png";
 import Egg from "../../img/common/egg.png";
 import Pouch from "../../img/common/pouch.png";
 
-
 import Next from "../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
 import { Page14 } from "../index";
@@ -103,7 +102,7 @@ const Page13 = () => {
             <div class="flex ">
               <div class="w-fit h-screen">
                 <div className="flex justify-center">
-                  <img src={Chef1} alt="" className="w-[14rem] mt-[0rem]" />
+                  <img src={Chef1} alt="" className="w-[14rem] mt-[0.5rem]" />
                 </div>
               </div>
               <div class="w-1/2 h-screen mt-10">
