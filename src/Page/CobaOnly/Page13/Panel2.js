@@ -1,20 +1,21 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Next from "../../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
-import Page7 from "../../Page7";
+import Panel3 from "./Panel3";
 
-const Panel1 = () => {
-  const [page7, setPage7] = useState(false);
+const Panel2 = () => {
+  const [panel3, setPanel3] = useState(false);
   const [skipDialog, setSkipDalog] = useState(false);
   const [nextButton, setNextButton] = useState(false);
+
+  const openPanel3 = () => {
+    setPanel3((current) => !current);
+  };
 
   const skip = () => {
     setSkipDalog((current) => !current);
   };
-  const openPage3 = () => {
-    setPage7((current) => !current);
-  };
+
   const DialogComplete = () => {
     return (
       <div className="w-[30rem] min-h-[7rem] px-5 pb-5 pt-10 bg-[#782443] rounded-xl ml-5 ring-offset-2 ring-4 ring-[#782443] relative">
@@ -27,25 +28,22 @@ const Panel1 = () => {
         </div>
         <div className="h-full grid gap-2 ">
           <h1 className="text-white font-semibold text-justify text-xl font-openSans">
-            Hari yang cerah semoga panen anda meningkat!Hari yang cerah semoga
-            panen anda meningkat!Hari yang cerah semoga panen anda meningkat!
+            Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu dan mulai
+            menanam padi!Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu
+            dan mulai menanam padi!
           </h1>
-          <div className="flex justify-end h-6">
-            <img
-              src={Next}
-              alt=""
-              className="w-6 animate-pulse"
-              onClick={openPage3}
-            />
+          <div className="flex justify-end h-6" onClick={openPanel3}>
+            <img src={Next} alt="" className="w-6 animate-pulse" />
           </div>
         </div>
       </div>
     );
   };
+
   return (
     <>
-      {page7 ? (
-        <Page7 />
+      {panel3 ? (
+        <Panel3 />
       ) : (
         <div>
           {skipDialog ? (
@@ -66,13 +64,13 @@ const Panel1 = () => {
                 <h1 className="text-white font-semibold text-justify text-xl font-openSans">
                   <Typewriter
                     options={{
-                      delay: 1,
+                      delay: 30,
                       cursor: " ",
                     }}
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "Hari yang cerah semoga panen anda meningkat!Hari yang cerah semoga panen anda meningkat!Hari yang cerah semoga panen anda meningkat!Hari yang cerah semoga panen anda meningkat!"
+                          "Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu dan mulai menanam padi!Ambil cangkulmu dan mulai menanam padi!"
                         )
                         .start()
                         .pauseFor(300)
@@ -83,7 +81,7 @@ const Panel1 = () => {
                   />
                 </h1>
 
-                <div className="flex justify-end h-6" onClick={openPage3}>
+                <div className="flex justify-end h-6" onClick={openPanel3}>
                   {nextButton ? (
                     <img src={Next} alt="" className="w-6 animate-pulse" />
                   ) : null}
@@ -97,4 +95,4 @@ const Panel1 = () => {
   );
 };
 
-export default Panel1;
+export default Panel2;

@@ -1,5 +1,5 @@
 import React from "react";
-import Next from "../../img/usage/play.png";
+import Next from "../../../img/usage/play.png";
 
 const DialogComplete = ({ DialogNya, nextDialog, skip }) => {
   const { text } = DialogNya;

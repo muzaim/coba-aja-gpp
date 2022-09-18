@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Next from "../../img/usage/play.png";
+import Next from "../../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
 
 const DialogPanel = ({ DialogNya, nextDialog, skip }) => {

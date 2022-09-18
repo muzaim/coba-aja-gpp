@@ -1,5 +1,5 @@
 import React from "react";
-import Farmer2 from "../../img/common/farmer2.png";
+import Farmer2 from "../../../img/common/farmer2.png";
 import Panel1 from "./Panel1";
 
 const Page2 = () => {

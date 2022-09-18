@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Next from "../../img/usage/play.png";
+import Next from "../../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
 import Panel2 from "./Panel2";
 
