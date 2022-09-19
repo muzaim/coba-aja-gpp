@@ -63,22 +63,22 @@ const Page8 = ({
               <div className="grid grid-cols-3 gap-3">
                 <div className=""></div>
                 <div className="">
-                  <Button
-                    action={openPage12}
-                    text={"tambah ternak"}
-                    textColor={"#782443"}
-                    bgColor={"#ffffff"}
-                    activeColor={"bg-slate-300"}
-                  />
+                  <div
+                    className="w-full h-full bg-white rounded-full py-3 text-center active:bg-[#782443] group"
+                    onClick={openPage12}
+                  >
+                    <span className="font-semibold capitalize text-lg tracking-wider text-[#782443] group-active:text-white">
+                      Tambah ternak
+                    </span>
+                  </div>
                 </div>
-                <div className="">
-                  <Button
-                    action={openPage9}
-                    text={"proses pangan"}
-                    textColor={"#ffffff"}
-                    bgColor={"#5e17eb"}
-                    activeColor={"bg-slate-300"}
-                  />
+                <div
+                  className="w-full h-full bg-[#5e17eb] rounded-full py-3 text-center active:bg-[#ffffff] group"
+                  onClick={openPage9}
+                >
+                  <span className="font-semibold capitalize text-lg tracking-wider text-[#ffffff] group-active:text-[#5e17eb]">
+                    proses pangan
+                  </span>
                 </div>
               </div>
             </div>

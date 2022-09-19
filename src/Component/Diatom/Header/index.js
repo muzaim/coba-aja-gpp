@@ -13,7 +13,7 @@ const Header = ({ Diamond, Egg, Pouch, Milk, QuestBook }) => {
           <img src={DiamondImg} alt="" className="w-10" />
         </div>
         <div className="w-full text-start ">
-          <span className="font-bold  text-sm text-[#782443]">1.315</span>
+          <span className="font-bold  text-sm text-[#782443]">2.115</span>
         </div>
       </div>
     );
@@ -67,7 +67,7 @@ const Header = ({ Diamond, Egg, Pouch, Milk, QuestBook }) => {
   };
 
   return (
-    <div className="flex h-full py-1 justify-between items-center ">
+    <div className="flex h-full py-1 justify-between items-center z-10">
       <div className="flex gap-2">
         {/* DIAMOND */}
         {Diamond ? <DiamondDiv /> : null}

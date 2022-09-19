@@ -55,9 +55,9 @@ const Page14 = () => {
         <Page15 />
       ) : (
         <div className="w-full h-screen overflow-hidden bg-caffe bg-cover lg:max-w-6xl mx-auto">
-          <div className="w-[90%] h-full mx-auto relative">
+          <div className="w-[90%] h-full mx-auto">
             {/* HEADER */}
-            <div class="h-16">
+            <div class="h-[15%]">
               <div className="flex h-full justify-between items-center ">
                 <div className="flex gap-2">
                   <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
@@ -101,7 +101,7 @@ const Page14 = () => {
             <div class="flex">
               <div class="w-fit h-screen">
                 <div className="flex justify-center">
-                  <img src={Chef1} alt="" className="w-[14rem] mt-[0rem]" />
+                  <img src={Chef1} alt="" className="w-[14rem] mt-[0.5rem]" />
                 </div>
               </div>
               <div class="w-1/2 h-screen mt-10">
