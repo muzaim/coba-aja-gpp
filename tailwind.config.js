@@ -10,6 +10,7 @@ module.exports = {
         caffe: "url('./img/bg/shop.jpg')",
         outFarm: "url('./img/bg/outfarm.jpg')",
         farmBarn: "url('./img/bg/farmbarn.jpg')",
+        farmCultivature: "url('./img/bg/farmCultivature.png')",
       },
       animation: {
         running: "fill 3.5s linear",

@@ -51,7 +51,7 @@ const Page3 = () => {
       {page4 ? (
         <Page4 />
       ) : (
-        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
+        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover mx-auto lg:max-w-6xl lg:h-[70%]">
           <div className="w-[90%] h-full mx-auto relative">
             <div class="h-16"></div>
             <div class="flex">

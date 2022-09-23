@@ -54,7 +54,7 @@ const Page1 = () => {
 
   const Tampilan = () => {
     return (
-      <div className="w-full h-screen overflow-hidden bg-farmBarn bg-cover lg:max-w-6xl mx-auto">
+      <div className="w-full h-screen overflow-hidden bg-farmBarn bg-cover mx-auto lg:max-w-6xl lg:h-[70%]">
         <div className="h-full ">
           <div className="flex h-full items-end justify-center -mt-8">
             {loading ? <LoadingBar /> : <Menu />}

@@ -9,7 +9,6 @@ import {
   Page7,
   Page8,
   Page9,
-  Page11,
   Page12,
   Page13,
   Page14,
@@ -25,8 +24,10 @@ class App extends Component {
       <DeviceOrientation lockOrientation={"landscape"}>
         {/* Will only be in DOM in landscape */}
         <Orientation orientation="landscape" alwaysRender={false}>
-          <div className="noSelect">
-            <Main />
+          <div className="noSelect h-screen">
+            <div className="w-full h-full flex items-center">
+              <Page5 />
+            </div>
           </div>
         </Orientation>
         {/* Will stay in DOM, but is only visible in portrait */}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Farmer2 from "../../../img/common/farmer2.png";
+import Kakek from "../../../img/common/kakek.png";
 import Next from "../../../img/usage/play.png";
 import Typewriter from "typewriter-effect";
 import { Page3 } from "../../index";
@@ -51,16 +52,19 @@ const Page2 = () => {
       {page3 ? (
         <Page3 />
       ) : (
-        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover lg:max-w-6xl mx-auto">
-          <div className="w-[90%] h-full mx-auto relative">
-            <div class="h-16"></div>
-            <div class="flex">
-              <div class="w-fit h-screen">
-                <div className="flex justify-center">
-                  <img src={Farmer2} alt="" className="w-[12rem] mt-[2.5rem]" />
+        <div className="w-full h-screen overflow-hidden bg-page2 bg-cover mx-auto lg:max-w-6xl lg:h-[70%]">
+          <div className="w-[90%] h-full mx-auto">
+            {/* HEADER */}
+            <div class="h-[15%]"></div>
+            {/* HEADER END */}
+            {/* CONTENT */}
+            <div class="h-[85%] flex">
+              <div class="w-[35%]">
+                <div className="w-full h-full items-end flex">
+                  <img src={Kakek} alt="" className="w-48" />
                 </div>
               </div>
-              <div class="w-1/2 h-screen ">
+              <div class="w-full h-screen mt-10">
                 {skipDialog ? (
                   <DialogComplete />
                 ) : (
@@ -71,7 +75,7 @@ const Page2 = () => {
                     <div className="absolute -top-5 left-10">
                       <div className="w-40 py-2 bg-[#782443] ring-offset-2 ring-4 ring-[#782443] rounded-xl text-center">
                         <span className="text-white font-semibold text-justify text-md font-openSans">
-                          Mr. Ducan
+                          Mrs. Lisa
                         </span>
                       </div>
                     </div>
@@ -110,6 +114,7 @@ const Page2 = () => {
                 )}
               </div>
             </div>
+            {/* CONTENT END*/}
           </div>
         </div>
       )}

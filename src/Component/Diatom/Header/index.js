@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import DiamondImg from "../../../img/common/diamond.png";
 import EggImg from "../../../img/common/egg.png";
 import PouchImg from "../../../img/common/pouch.png";
 import MilkImg from "../../../img/common/milk.png";
 import QuestBookImg from "../../../img/common/questbook.png";
+import { Page6 } from "../../../Page";
 
-const Header = ({ Diamond, Egg, Pouch, Milk, QuestBook }) => {
+const Header = ({
+  Diamond,
+  Egg,
+  Pouch,
+  Milk,
+  QuestBook,
+  BackButton,
+  Action1,
+}) => {
+  const [page6, setPage6] = useState(false);
+  const [tampilan, setTampilan] = useState(true);
+  const openPage6 = () => {
+    setPage6((current) => !current);
+    setTampilan((current) => !current);
+  };
   const DiamondDiv = () => {
     return (
       <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
@@ -60,36 +75,63 @@ const Header = ({ Diamond, Egg, Pouch, Milk, QuestBook }) => {
 
   const QuestBookDiv = () => {
     return (
-      <div className="">
+      <div className="" onClick={openPage6}>
         <img src={QuestBookImg} alt="" className="w-16" />
       </div>
     );
   };
 
-  return (
-    <div className="flex h-full py-1 justify-between items-center z-10">
-      <div className="flex gap-2">
-        {/* DIAMOND */}
-        {Diamond ? <DiamondDiv /> : null}
-        {/* DIAMOND END*/}
-
-        {/* EGG */}
-        {Egg ? <EggDiv /> : null}
-        {/* EGG END */}
-
-        {/* POUCH */}
-        {Pouch ? <PouchDiv /> : null}
-        {/* POUCH END */}
-
-        {/* MILK */}
-        {Milk ? <MilkDiv /> : null}
-        {/* MILK END */}
+  const BackButtonDiv = () => {
+    return (
+      <div
+        className="w-44 h-10 bg-[#329bd1] rounded-full items-center flex active:bg-[#51a9d5]"
+        onClick={Action1}
+      >
+        <div className="w-full text-center ">
+          <span className="font-bold  text-sm text-white tracking-widest">
+            Back
+          </span>
+        </div>
       </div>
+    );
+  };
 
-      {/* QUEST BOOK */}
-      {QuestBook ? <QuestBookDiv /> : null}
-      {/* QUEST BOOK END*/}
-    </div>
+  const Tampilan = () => {
+    return (
+      <div className="flex h-full py-1 justify-between items-center z-10">
+        <div className="flex gap-2">
+          {/* DIAMOND */}
+          {Diamond ? <DiamondDiv /> : null}
+          {/* DIAMOND END*/}
+
+          {/* EGG */}
+          {Egg ? <EggDiv /> : null}
+          {/* EGG END */}
+
+          {/* POUCH */}
+          {Pouch ? <PouchDiv /> : null}
+          {/* POUCH END */}
+
+          {/* MILK */}
+          {Milk ? <MilkDiv /> : null}
+          {/* MILK END */}
+        </div>
+
+        {/* QUEST BOOK */}
+        {QuestBook ? <QuestBookDiv /> : null}
+        {/* QUEST BOOK END*/}
+
+        {/* QUEST BOOK */}
+        {BackButton ? <BackButtonDiv /> : null}
+        {/* QUEST BOOK END*/}
+      </div>
+    );
+  };
+  return (
+    <>
+      {page6 && <Page6 />}
+      {tampilan && <Tampilan />}
+    </>
   );
 };
 

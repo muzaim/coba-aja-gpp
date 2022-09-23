@@ -1,12 +1,15 @@
 import React from "react";
 import Diamond from "../../../img/common/diamond.png";
 import Pouch from "../../../img/common/pouch.png";
-import QuestBook from "../../../img/common/questbook.png";
-import { Page9, Page13 } from "../../index";
+import { Page6, Page13 } from "../../index";
 import { useState } from "react";
+import DiamondImg from "../../../img/common/diamond.png";
+import EggImg from "../../../img/common/egg.png";
+import MilkImg from "../../../img/common/milk.png";
+import QuestBookImg from "../../../img/common/questbook.png";
 
 const Page15 = () => {
-  const [page9, setPage9] = useState(false);
+  const [page6, setPage6] = useState(false);
 
   const [page13, setPage13] = useState(false);
 
@@ -57,9 +60,8 @@ const Page15 = () => {
       price: "100.000",
     },
   ];
-
-  const openPage9 = () => {
-    setPage9((current) => !current);
+  const openPage6 = () => {
+    setPage6((current) => !current);
   };
 
   const openPage13 = () => {
@@ -67,38 +69,49 @@ const Page15 = () => {
   };
   return (
     <>
-      {(page9 && <Page9 />) || (page13 && <Page13 />) || (
-        <div className="w-full h-screen overflow-hidden bg-outFarm bg-left bg-cover lg:max-w-6xl mx-auto">
+      {(page6 && <Page6 />) || (page13 && <Page13 />) || (
+        <div className="w-full h-screen overflow-hidden bg-outFarm bg-cover mx-auto lg:max-w-6xl lg:h-[70%]">
           <div className="w-[90%] h-full mx-auto">
             {/* HEADER */}
             <div class="h-[15%]">
-              <div className="flex h-full justify-between items-center ">
+              <div className="flex h-full py-1 justify-between items-center z-10">
                 <div className="flex gap-2">
+                  {/* Diamond */}
                   <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
                     <div className="w-20 flex items-center justify-center ">
-                      <img src={Diamond} alt="" className="w-10" />
+                      <img src={DiamondImg} alt="" className="w-10" />
                     </div>
                     <div className="w-full text-start ">
                       <span className="font-bold  text-sm text-[#782443]">
-                        0
+                        2.115
                       </span>
                     </div>
                   </div>
-
+                  {/* Egg */}
                   <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
                     <div className="w-20 flex items-center justify-center ">
-                      <img src={Pouch} alt="" className="w-8" />
+                      <img src={EggImg} alt="" className="w-8" />
                     </div>
                     <div className="w-full text-start ">
                       <span className="font-bold  text-sm text-[#782443]">
-                        10.000 Kg
+                        120 Butir
+                      </span>
+                    </div>
+                  </div>
+                  {/* Pouch */}
+                  <div className="w-44 h-10 bg-[#f6f3e4] rounded-full items-center flex">
+                    <div className="w-20 flex items-center justify-center ">
+                      <img src={MilkImg} alt="" className="w-8" />
+                    </div>
+                    <div className="w-full text-start ">
+                      <span className="font-bold  text-sm text-[#782443]">
+                        251 Liter
                       </span>
                     </div>
                   </div>
                 </div>
-
-                <div>
-                  <img src={QuestBook} alt="" className="w-16" />
+                <div className="" onClick={openPage6}>
+                  <img src={QuestBookImg} alt="" className="w-16" />
                 </div>
               </div>
             </div>
@@ -134,7 +147,7 @@ const Page15 = () => {
               <div className=" px-10 flex justify-end">
                 <div
                   className="w-52 h-full bg-[#329bd1] rounded-full py-3 text-center"
-                  onClick={openPage9}
+                  onClick={openPage6}
                 >
                   <div className="font-semibold capitalize text-lg tracking-wider text-white">
                     kembali
