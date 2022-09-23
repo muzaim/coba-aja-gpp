@@ -26,7 +26,7 @@ class App extends Component {
         <Orientation orientation="landscape" alwaysRender={false}>
           <div className="noSelect h-screen">
             <div className="w-full h-full flex items-center">
-              <Page5 />
+              <Main />
             </div>
           </div>
         </Orientation>
